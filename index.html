@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Pixel Art Drawer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Pixel Art Drawer</h1>
+      <p>Create tiny artworks with a simple grid</p>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <section class="control-group">
+          <label for="grid-size">Grid Size</label>
+          <select id="grid-size">
+            <option value="8">8 x 8</option>
+            <option value="12" selected>12 x 12</option>
+            <option value="16">16 x 16</option>
+            <option value="24">24 x 24</option>
+          </select>
+        </section>
+        <section class="control-group">
+          <label>Tool</label>
+          <div class="button-row">
+            <button id="tool-pencil" class="btn active">Pencil</button>
+            <button id="tool-eraser" class="btn">Eraser</button>
+            <button id="tool-fill" class="btn">Bucket</button>
+          </div>
+        </section>
+        <section class="control-group">
+          <label>Palette</label>
+          <div id="palette" class="palette"></div>
+          <div class="custom-color-row">
+            <input type="color" id="custom-color" value="#2f6f55">
+            <button id="add-color" class="btn">Add Color</button>
+          </div>
+        </section>
+        <section class="control-group">
+          <label>Actions</label>
+          <div class="button-row">
+            <button id="action-clear" class="btn">Clear</button>
+            <button id="action-export" class="btn">Export</button>
+          </div>
+        </section>
+      </aside>
+      <section class="canvas-container">
+        <div id="pixel-grid" class="pixel-grid"></div>
+      </section>
+    </div>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Export Art</h2>
+        <p>Copy your pixel art data or view your image.</p>
+        <textarea id="export-output" readonly></textarea>
+        <div class="button-row">
+          <button id="modal-close" class="btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
